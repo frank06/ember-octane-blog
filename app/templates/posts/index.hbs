@@ -1,7 +1,7 @@
-<Input @value={{this.newTitle}} @enter={{action this.addPost}} />
+<Input @value={{this.newTitle}} @enter={{fn this.addPost}} />
 
 <ul>
-  {{#each this.model as |post|}}
+  {{#each @model as |post|}}
     <li>
       <LinkTo @route="posts.post" @model={{post.id}}>
         <PostView @post={{post}} @showBody={{false}} />

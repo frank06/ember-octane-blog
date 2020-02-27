@@ -1,11 +1,10 @@
-import DS from 'ember-data';
-const { Model, attr } = DS;
+import Model, { attr } from '@ember-data/model';
 
 export default class PostModel extends Model {
-  @attr() title;
-  @attr() body;
+  @attr title;
+  @attr body;
   @attr('date') publishedAt;
-  
+
   get formattedPublishedAt() {
     return this.publishedAt.toLocaleDateString("en-US");
   }

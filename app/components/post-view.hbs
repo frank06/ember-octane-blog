@@ -3,8 +3,8 @@
 {{#if @showBody}}
   <span>{{@post.formattedPublishedAt}}</span>
   <pre style="white-space: pre-wrap;">{{@post.body}}</pre>
-  
-  <button {{on "click" (action this.removePost @post)}}>
+
+  <button {{on "click" (fn this.removePost @post)}}>
     Remove post
   </button>
 {{/if}}
